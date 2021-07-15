@@ -1,0 +1,3 @@
+/home/ban/Downloads/cmake/checkdir/CMakeFiles/rebuild_cache.dir
+/home/ban/Downloads/cmake/checkdir/CMakeFiles/check.dir
+/home/ban/Downloads/cmake/checkdir/CMakeFiles/edit_cache.dir

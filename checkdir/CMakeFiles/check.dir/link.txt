@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o  -o check 
