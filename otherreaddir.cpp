@@ -12,11 +12,10 @@
 
 using namespace std;
 
-char *sir[10];
-//time_t *timesir;
+char **sir = (char **)malloc(10 * sizeof(char *));
 time_t timesir[10];
+
 int change = 0;
-int varsum;
 
 int find_file(const char *nm)
 {
@@ -29,6 +28,18 @@ int find_file(const char *nm)
                         }
         return 0;
                         
+}
+
+void stergere(int k)
+{
+	int i;
+	for(i = k; i < change - 1; i++)
+	{
+		strcpy(*(sir + i),*(sir + i+1));
+		timesir[i] = timesir[i+1];
+	}
+	
+	free(*(sir + change - 1));
 }
 
 
@@ -53,8 +64,7 @@ int check_dir(const char *dir)
 	            continue;
 
 	    	int var = find_file(nm);
-	    	//daca suma de var nu e ca ce de dinainte => sterge un fisier din vect
-	    	//varsum = varsum + var;
+	    	
 		if(var)
 		{
 			time_t timer;
@@ -62,9 +72,13 @@ int check_dir(const char *dir)
 			//check time(nm);
 
 			if( difftime(timer,timesir[var-1]) >= 10 ) //time(nm)>10s
-			printf("%s %d \n", nm, find_file(nm));
-
-			//transfera fisieru in 1KB
+			{ 
+				//transfera fisieru in 1KB
+				printf("%s %d %d\n", nm, var-1, change);
+				stergere(var-1);
+				change--;
+			}
+			
 			
 			
 			
@@ -72,8 +86,10 @@ int check_dir(const char *dir)
 		else
 		{
 			cout << nm << ' ';
-			*(sir + change) = nm;
-			
+			//*(sir + change) = nm;
+			*(sir + change) = (char *)malloc(strlen(nm) + 1);
+			strcpy(*(sir + change),(char *)nm);
+
 			//set time(nm);
 			timesir[change] = time(NULL);
 
@@ -84,7 +100,7 @@ int check_dir(const char *dir)
 		
 	}
 	cout << '\n';
-	
+	closedir(dirp);
 	
 	return 0;
 }
