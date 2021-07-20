@@ -8,6 +8,8 @@
 #include <ctime>
 #include <thread>
 #include <chrono>
+#include <fstream>
+#include <string>
 
 
 using namespace std;
@@ -16,6 +18,7 @@ char **sir = (char **)malloc(10 * sizeof(char *));
 time_t timesir[10];
 
 int change = 0;
+int check = 0;
 
 int find_file(const char *nm)
 {
@@ -26,8 +29,7 @@ int find_file(const char *nm)
                         //cout << nm << ' ';
                         return i+1;
                         }
-        return 0;
-                        
+        return 0;    
 }
 
 void stergere(int k)
@@ -42,6 +44,10 @@ void stergere(int k)
 	free(*(sir + change - 1));
 }
 
+void dividerestore(string dir, string nm)
+{
+
+}
 
 int check_dir(const char *dir)
 {
@@ -63,6 +69,23 @@ int check_dir(const char *dir)
 		if (strcmp(nm, ".") == 0 || strcmp(nm, "..") == 0)
 	            continue;
 
+	    	//cout << nm << ' ';
+
+	    	if ( check == 0 )
+	    	{
+	            	if (mkdir("bufferdir", 0777) == -1)
+	            	{
+        			cerr << "Error :  " << strerror(errno) << endl;
+  		    	}
+    		    	else
+    		    	{
+    		    		cout << "Directory created" << endl;
+    		    	}
+       			check = 1;
+	    	}
+	    	else if (strcmp(nm, "bufferdir") == 0)
+	            	continue;
+
 	    	int var = find_file(nm);
 	    	
 		if(var)
@@ -71,10 +94,10 @@ int check_dir(const char *dir)
 			time(&timer);
 			//check time(nm);
 
-			if( difftime(timer,timesir[var-1]) >= 10 ) //time(nm)>10s
+			if( difftime(timer,timesir[var-1]) >= 30 ) //time(nm)>10s
 			{ 
 				//transfera fisieru in 1KB
-				printf("%s %d %d\n", nm, var-1, change);
+				printf("\n%s | curent poz in sir:%d max poz:%d\n", nm, var-1, change);
 				stergere(var-1);
 				change--;
 			}
@@ -86,6 +109,7 @@ int check_dir(const char *dir)
 		else
 		{
 			cout << nm << ' ';
+			
 			//*(sir + change) = nm;
 			*(sir + change) = (char *)malloc(strlen(nm) + 1);
 			strcpy(*(sir + change),(char *)nm);
@@ -99,7 +123,7 @@ int check_dir(const char *dir)
 		}
 		
 	}
-	cout << '\n';
+	//cout << '\n';
 	closedir(dirp);
 	
 	return 0;
