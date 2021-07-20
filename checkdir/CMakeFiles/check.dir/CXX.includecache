@@ -21,6 +21,8 @@ string.h
 -
 cstdlib
 -
+cstdio
+-
 ctime
 -
 thread

@@ -5,6 +5,7 @@
 #include <sys/stat.h>
 #include <string.h>
 #include <cstdlib>
+#include <cstdio>
 #include <ctime>
 #include <thread>
 #include <chrono>
@@ -44,8 +45,74 @@ void stergere(int k)
 	free(*(sir + change - 1));
 }
 
-void dividerestore(string dir, string nm)
+void dividerestore(string dir, string fullnume)
 {
+  
+  string fout (dir);
+  fout += "bufferdir/";
+
+  int i = 0;
+  int length = 0;
+  for(i = fullnume.length() - 1; i >= 0; i--)
+    if(fullnume[i] == '.')
+      break;
+    cout << i << " " << fullnume.length() - 1 << '\n';
+  char c_nume[20];
+  char c_ext[10];
+  length = fullnume.copy(c_nume,i,0);
+  c_nume[length] = '\0';
+  length = fullnume.copy(c_ext,fullnume.length() - 1,i);
+  c_ext[length] = '\0';
+  cout << c_nume << c_ext << '\n';
+  string nume(c_nume);
+  string ext(c_ext);
+
+  ifstream finfile (dir + fullnume,ifstream::binary);
+  ofstream foutfile (fout + nume + "_final" + ext,ofstream::binary);
+
+  long size = 1000;
+
+  i=0;
+
+  while(finfile.eof() == false)
+  {
+
+  ofstream outfile (fout + nume + "_" + to_string(i) + ".txt",ofstream::binary);
+  char* buffer = new char[size];
+
+  finfile.read (buffer,size);
+
+  outfile.write (buffer,size);
+
+  delete[] buffer;
+
+  outfile.close();
+
+  i++;
+
+  }
+  int sup = i;
+  i = 0;
+  while(i<sup)
+  {
+
+  ifstream infile (fout + nume + "_" + to_string(i) + ".txt",ofstream::binary);
+  char* buffer = new char[size];
+
+  infile.read (buffer,size);
+
+  foutfile.write (buffer,size);
+
+  delete[] buffer;
+
+  infile.close();
+
+  i++;
+  
+  }
+
+  foutfile.close();
+  finfile.close();
 
 }
 
@@ -94,10 +161,19 @@ int check_dir(const char *dir)
 			time(&timer);
 			//check time(nm);
 
-			if( difftime(timer,timesir[var-1]) >= 30 ) //time(nm)>10s
+			if( difftime(timer,timesir[var-1]) >= 15 ) //time(nm)>10s
 			{ 
 				//transfera fisieru in 1KB
+				string st_dir(dir);
+				string st_nm(nm);
+				dividerestore(st_dir,st_nm);
 				printf("\n%s | curent poz in sir:%d max poz:%d\n", nm, var-1, change);
+				
+				if( remove(nm) != 0 )
+    					perror( "Error deleting file" );
+  				else
+    					puts( "File successfully deleted" );
+
 				stergere(var-1);
 				change--;
 			}
@@ -135,7 +211,7 @@ int main()
 	while(1)
 	{
 		this_thread::sleep_for (chrono::milliseconds(500));
-		check_dir("/home/ban/Desktop/pics");
+		check_dir("/home/ban/Desktop/pics/");
 		
 	}
 	return(0);
