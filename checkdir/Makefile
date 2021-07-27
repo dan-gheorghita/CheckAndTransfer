@@ -124,19 +124,19 @@ check/fast:
 .PHONY : check/fast
 
 # target to build an object file
-home/ban/Downloads/cmake/otherreaddir.o:
-	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o
-.PHONY : home/ban/Downloads/cmake/otherreaddir.o
+home/ban/Downloads/cmake/classreaddir.o:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o
+.PHONY : home/ban/Downloads/cmake/classreaddir.o
 
 # target to preprocess a source file
-home/ban/Downloads/cmake/otherreaddir.i:
-	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.i
-.PHONY : home/ban/Downloads/cmake/otherreaddir.i
+home/ban/Downloads/cmake/classreaddir.i:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.i
+.PHONY : home/ban/Downloads/cmake/classreaddir.i
 
 # target to generate assembly for a file
-home/ban/Downloads/cmake/otherreaddir.s:
-	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.s
-.PHONY : home/ban/Downloads/cmake/otherreaddir.s
+home/ban/Downloads/cmake/classreaddir.s:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.s
+.PHONY : home/ban/Downloads/cmake/classreaddir.s
 
 # Help Target
 help:
@@ -147,9 +147,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... check"
 	@echo "... edit_cache"
-	@echo "... home/ban/Downloads/cmake/otherreaddir.o"
-	@echo "... home/ban/Downloads/cmake/otherreaddir.i"
-	@echo "... home/ban/Downloads/cmake/otherreaddir.s"
+	@echo "... home/ban/Downloads/cmake/classreaddir.o"
+	@echo "... home/ban/Downloads/cmake/classreaddir.i"
+	@echo "... home/ban/Downloads/cmake/classreaddir.s"
 .PHONY : help
 
 

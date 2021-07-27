@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o"
+  "CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o"
   "check.pdb"
   "check"
 )

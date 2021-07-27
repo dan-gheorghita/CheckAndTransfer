@@ -57,38 +57,38 @@ include CMakeFiles/check.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/check.dir/flags.make
 
-CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o: CMakeFiles/check.dir/flags.make
-CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o: /home/ban/Downloads/cmake/otherreaddir.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ban/Downloads/cmake/checkdir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o -c /home/ban/Downloads/cmake/otherreaddir.cpp
+CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o: CMakeFiles/check.dir/flags.make
+CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o: /home/ban/Downloads/cmake/classreaddir.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ban/Downloads/cmake/checkdir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o -c /home/ban/Downloads/cmake/classreaddir.cpp
 
-CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ban/Downloads/cmake/otherreaddir.cpp > CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.i
+CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ban/Downloads/cmake/classreaddir.cpp > CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.i
 
-CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ban/Downloads/cmake/otherreaddir.cpp -o CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.s
+CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ban/Downloads/cmake/classreaddir.cpp -o CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.s
 
-CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o.requires:
+CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o.requires:
 
-.PHONY : CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o.requires
+.PHONY : CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o.requires
 
-CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o.provides: CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o.requires
-	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o.provides.build
-.PHONY : CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o.provides
+CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o.provides: CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o.requires
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o.provides.build
+.PHONY : CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o.provides
 
-CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o.provides.build: CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o
+CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o.provides.build: CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o
 
 
 # Object files for target check
 check_OBJECTS = \
-"CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o"
+"CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o"
 
 # External object files for target check
 check_EXTERNAL_OBJECTS =
 
-check: CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o
+check: CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o
 check: CMakeFiles/check.dir/build.make
 check: CMakeFiles/check.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ban/Downloads/cmake/checkdir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable check"
@@ -99,7 +99,7 @@ CMakeFiles/check.dir/build: check
 
 .PHONY : CMakeFiles/check.dir/build
 
-CMakeFiles/check.dir/requires: CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o.requires
+CMakeFiles/check.dir/requires: CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o.requires
 
 .PHONY : CMakeFiles/check.dir/requires
 

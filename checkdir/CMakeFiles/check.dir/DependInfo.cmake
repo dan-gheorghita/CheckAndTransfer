@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ban/Downloads/cmake/otherreaddir.cpp" "/home/ban/Downloads/cmake/checkdir/CMakeFiles/check.dir/home/ban/Downloads/cmake/otherreaddir.o"
+  "/home/ban/Downloads/cmake/classreaddir.cpp" "/home/ban/Downloads/cmake/checkdir/CMakeFiles/check.dir/home/ban/Downloads/cmake/classreaddir.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
