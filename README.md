@@ -1,4 +1,5 @@
-This program checks for files in a directory then splits them into another directory. After splitting the file it reasambles in the same path.
+A c++ program that reads reguilary all the files from a folder then splits the files in another folder.
 
-othercheckdir.cpp is the main program
-checkdir contains the cmake build files
+Works for Linux
+
+Compiled with Cmake

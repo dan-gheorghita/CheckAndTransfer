@@ -132,7 +132,7 @@ void Director_input::transfer(list<Fisier>::iterator trans)
     if (stat(path_of_fisier.c_str(), &file_stats) == -1)
         perror(path_of_fisier.c_str());
 
-    int size_of_files = 1000; // marimea fisierelor de 1KB
+    int size_of_files = 1000; //marimea fisierelor de 1KB
 
     unsigned long filesize = (unsigned long)file_stats.st_size;
     double middle = (double)filesize / size_of_files;
