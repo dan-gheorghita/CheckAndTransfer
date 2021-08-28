@@ -1,4 +1,4 @@
-A c++ program that reads reguilary all the files from a folder then splits the files in another folder.
+A c++ program that reads regularly all the files from a folder then splits the files in another folder.
 
 Works for Linux
 
