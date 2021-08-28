@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ban/Downloads/cmake/checkandtransfer.cpp
+chrono
+-
+cstring
+-
+ctime
+-
+dirent.h
+-
+fstream
+-
+iostream
+-
+list
+-
+string
+-
+sys/stat.h
+-
+sys/types.h
+-
+thread
+-
+unistd.h
+-
+
