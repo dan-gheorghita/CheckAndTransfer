@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/check.dir/home/ban/Downloads/cmake/checkandtransfer.o  -o check 
+/usr/bin/c++    -rdynamic CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/checkandtransfer.o CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/Director.o CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/Director_input.o  -o check 

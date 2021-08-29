@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/check.dir/home/ban/Downloads/cmake/checkandtransfer.o"
+  "CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/checkandtransfer.o"
+  "CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/Director.o"
+  "CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/Director_input.o"
   "check.pdb"
   "check"
 )

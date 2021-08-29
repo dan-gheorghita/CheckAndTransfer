@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ban/Downloads/cmake/buildproj
+CMAKE_SOURCE_DIR = /home/ban/Documents/CheckAndTransfer/buildproj
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ban/Downloads/cmake/buildproj
+CMAKE_BINARY_DIR = /home/ban/Documents/CheckAndTransfer/buildproj
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ban/Downloads/cmake/buildproj/CMakeFiles /home/ban/Downloads/cmake/buildproj/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ban/Documents/CheckAndTransfer/buildproj/CMakeFiles /home/ban/Documents/CheckAndTransfer/buildproj/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ban/Downloads/cmake/buildproj/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ban/Documents/CheckAndTransfer/buildproj/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,19 +124,49 @@ check/fast:
 .PHONY : check/fast
 
 # target to build an object file
-home/ban/Downloads/cmake/checkandtransfer.o:
-	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Downloads/cmake/checkandtransfer.o
-.PHONY : home/ban/Downloads/cmake/checkandtransfer.o
+home/ban/Documents/CheckAndTransfer/Director.o:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/Director.o
+.PHONY : home/ban/Documents/CheckAndTransfer/Director.o
 
 # target to preprocess a source file
-home/ban/Downloads/cmake/checkandtransfer.i:
-	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Downloads/cmake/checkandtransfer.i
-.PHONY : home/ban/Downloads/cmake/checkandtransfer.i
+home/ban/Documents/CheckAndTransfer/Director.i:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/Director.i
+.PHONY : home/ban/Documents/CheckAndTransfer/Director.i
 
 # target to generate assembly for a file
-home/ban/Downloads/cmake/checkandtransfer.s:
-	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Downloads/cmake/checkandtransfer.s
-.PHONY : home/ban/Downloads/cmake/checkandtransfer.s
+home/ban/Documents/CheckAndTransfer/Director.s:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/Director.s
+.PHONY : home/ban/Documents/CheckAndTransfer/Director.s
+
+# target to build an object file
+home/ban/Documents/CheckAndTransfer/Director_input.o:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/Director_input.o
+.PHONY : home/ban/Documents/CheckAndTransfer/Director_input.o
+
+# target to preprocess a source file
+home/ban/Documents/CheckAndTransfer/Director_input.i:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/Director_input.i
+.PHONY : home/ban/Documents/CheckAndTransfer/Director_input.i
+
+# target to generate assembly for a file
+home/ban/Documents/CheckAndTransfer/Director_input.s:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/Director_input.s
+.PHONY : home/ban/Documents/CheckAndTransfer/Director_input.s
+
+# target to build an object file
+home/ban/Documents/CheckAndTransfer/checkandtransfer.o:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/checkandtransfer.o
+.PHONY : home/ban/Documents/CheckAndTransfer/checkandtransfer.o
+
+# target to preprocess a source file
+home/ban/Documents/CheckAndTransfer/checkandtransfer.i:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/checkandtransfer.i
+.PHONY : home/ban/Documents/CheckAndTransfer/checkandtransfer.i
+
+# target to generate assembly for a file
+home/ban/Documents/CheckAndTransfer/checkandtransfer.s:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/checkandtransfer.s
+.PHONY : home/ban/Documents/CheckAndTransfer/checkandtransfer.s
 
 # Help Target
 help:
@@ -147,9 +177,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... check"
 	@echo "... edit_cache"
-	@echo "... home/ban/Downloads/cmake/checkandtransfer.o"
-	@echo "... home/ban/Downloads/cmake/checkandtransfer.i"
-	@echo "... home/ban/Downloads/cmake/checkandtransfer.s"
+	@echo "... home/ban/Documents/CheckAndTransfer/Director.o"
+	@echo "... home/ban/Documents/CheckAndTransfer/Director.i"
+	@echo "... home/ban/Documents/CheckAndTransfer/Director.s"
+	@echo "... home/ban/Documents/CheckAndTransfer/Director_input.o"
+	@echo "... home/ban/Documents/CheckAndTransfer/Director_input.i"
+	@echo "... home/ban/Documents/CheckAndTransfer/Director_input.s"
+	@echo "... home/ban/Documents/CheckAndTransfer/checkandtransfer.o"
+	@echo "... home/ban/Documents/CheckAndTransfer/checkandtransfer.i"
+	@echo "... home/ban/Documents/CheckAndTransfer/checkandtransfer.s"
 .PHONY : help
 
 

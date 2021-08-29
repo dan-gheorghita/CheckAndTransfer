@@ -4,12 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ban/Downloads/cmake/checkandtransfer.cpp" "/home/ban/Downloads/cmake/buildproj/CMakeFiles/check.dir/home/ban/Downloads/cmake/checkandtransfer.o"
+  "/home/ban/Documents/CheckAndTransfer/Director.cpp" "/home/ban/Documents/CheckAndTransfer/buildproj/CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/Director.o"
+  "/home/ban/Documents/CheckAndTransfer/Director_input.cpp" "/home/ban/Documents/CheckAndTransfer/buildproj/CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/Director_input.o"
+  "/home/ban/Documents/CheckAndTransfer/checkandtransfer.cpp" "/home/ban/Documents/CheckAndTransfer/buildproj/CMakeFiles/check.dir/home/ban/Documents/CheckAndTransfer/checkandtransfer.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/ban/Documents/CheckAndTransfer/include"
   )
 
 # Targets to which this target links.
