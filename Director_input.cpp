@@ -24,6 +24,10 @@ void Director_input::set_output_name(string str)
     }
 }
 
+void write(unsigned long maxim, int last, int size_of_files, ifstream &file_to_read, string path_subdirector_output){}
+//note: de adaugat subfoldere pentru fisierele foarte mari
+
+//de implementat threaduri in asa fel functia tranfer sa fie executata in paralel cu restul
 void Director_input::transfer(list<Fisier>::iterator trans)
 {
     string path_of_fisier = path_of_directory + trans->nume;
@@ -46,9 +50,25 @@ void Director_input::transfer(list<Fisier>::iterator trans)
 
     int i = 0;
 
+    int file_count = 0;
+    string path_subdirector_output = path_director_output;
+
+    if(filesize >= 10000)
+    {
+            path_subdirector_output = path_director_output + nume_fara_ext + "_dir_" + to_string(i) + "/";
+            Director::create_sub_directory(path_subdirector_output);
+            file_count = 0;
+    }
+
     // crearea fisierelor mici
     while (i < maxim) {
-        ofstream file_to_write(path_director_output + nume_fara_ext + "_" + to_string(i) + ".txt", ofstream::binary);
+
+        if(file_count >= 10000){
+            path_subdirector_output = path_director_output + nume_fara_ext + "_dir_" + to_string(i/10000) + "/";
+            Director::create_sub_directory(path_subdirector_output);
+            file_count = 0;
+        }
+        ofstream file_to_write(path_subdirector_output + nume_fara_ext + "_" + to_string(i) + ".txt", ofstream::binary);
 
         char* buffer = new char[size_of_files];
 
@@ -61,10 +81,11 @@ void Director_input::transfer(list<Fisier>::iterator trans)
         file_to_write.close();
 
         i++;
+        file_count++;
     }
 
     if (last) {
-        ofstream file_to_write(path_director_output + nume_fara_ext + "_" + to_string(i) + ".txt", ofstream::binary);
+        ofstream file_to_write(path_subdirector_output + nume_fara_ext + "_" + to_string(i) + ".txt", ofstream::binary);
 
         char* buffer = new char[last];
 
@@ -89,9 +110,9 @@ int Director_input::check_file(const char* nm)
             time_t timer;
             time(&timer);
 
-            if (difftime(timer, it->timp) >= 10) //check time de fisier
+            if (difftime(timer, it->timp) >= 10) //check time de fisier//fa check pt thread id
             {
-                Director_input::transfer(it);
+                Director_input::transfer(it);//thread detachable
                 Director::delete_file(it);
             }
 
@@ -114,7 +135,7 @@ void Director_input::check_and_transfer()
 
         char* nm = dent->d_name;
 
-        if (strcmp(nm, ".") == 0 || strcmp(nm, "..") == 0 || nume_director_output.compare(nm) == 0)
+        if (strcmp(nm, ".") == 0 || strcmp(nm, "..") == 0 || nume_director_output.compare(nm) == 0)//adaugare nume evitare proces
             continue;
 
         Director_input::check_file(nm);

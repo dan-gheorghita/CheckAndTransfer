@@ -10,6 +10,8 @@ int main()
 
     while (1) {
         dir.check_and_transfer();
-        this_thread::sleep_for(chrono::milliseconds(500));
+        //this_thread::sleep_for(chrono::milliseconds(500));
     }
 }
+
+//daca folosessti un fisier prea mare foloseste inods si nu mai merge sistemul in folder

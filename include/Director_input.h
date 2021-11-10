@@ -11,7 +11,8 @@ class Director_input : public Director {
     string nume_director_output;
 
 public:
-    using Director::Director;
+    //using Director::Director;
+    Director_input (string nume_director) : Director(nume_director){}
     void set_output_name(string str);
     void transfer(list<Fisier>::iterator trans);
     int check_file(const char* nm);

@@ -33,6 +33,17 @@ void Director::delete_file(list<Fisier>::iterator to_delet)
     lista_fisiere.erase(to_delet);
 }
 
+void Director::create_sub_directory(string path)
+{
+    //string sub_dir_path;
+    //sub_dir_path = path + nume + "/";
+    if (mkdir(path.c_str(), 0777) == -1) {
+        cerr << "Error :  " << strerror(errno) << endl;
+    } else {
+        cout << "Subdirectory created" << endl;
+    }
+}
+
 int Director::find_file(const char* nm)
 {
     string str(nm);
